@@ -4,12 +4,12 @@
 
     <div>
         <label for="trackingnumber">tracking number</label>
-        <input required type="number" value ="" id="trackingnumber" name="trackingnumber" onkeyup="myFunction(this.value)">
+        <input required type="number" value ="" id="trackingnumber" name="trackingnumber" onkeyup="deleteError(this.value)">
         <br>
     </div>
     
     <div>
-     <select required id="country" onchange="myFunction(this.value)">
+     <select required id="country" onchange="deleteError(this.value)">
         <option value="" disabled selected hidden>Choose a Country</option>
         <option value="eg">Egypt</option>
         <option value="sa">Saudi Arabia</option>
@@ -19,7 +19,7 @@
     </div>
     
   	<div>
-     <select required id="company" onchange="myFunction(this.value)">
+     <select required id="company" onchange="deleteError(this.value)">
         <option value="" disabled selected hidden>Choose a Company</option>
         <option value="c1">Company 1</option>
         <option value="c2">Company 2</option>
@@ -29,7 +29,7 @@
     
     <p id="showError">error invalid tracking number or company name</p>
     <script>
-        function myFunction(value) {
+        function deleteError(value) {
             var showError = document.getElementById("showError");
             if(value){
              showError.innerHTML = "";
