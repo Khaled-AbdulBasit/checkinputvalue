@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div>
+        <label for="trackingnumber">tracking number</label>
+        <input required type="number" value ="" id="trackingnumber" name="trackingnumber" onkeyup="myFunction(this.value)">
+        <br>
+    </div>
+    
+    <div>
+     <select required id="country" onchange="myFunction(this.value)">
+        <option value="" disabled selected hidden>Choose a Country</option>
+        <option value="eg">Egypt</option>
+        <option value="sa">Saudi Arabia</option>
+        <option value="Ku">Kuwait</option>
+        <option value="usa">United States of America</option>
+      </select>
+    </div>
+    
+  	<div>
+     <select required id="company" onchange="myFunction(this.value)">
+        <option value="" disabled selected hidden>Choose a Company</option>
+        <option value="c1">Company 1</option>
+        <option value="c2">Company 2</option>
+        <option value="c3">Company 3</option>
+      </select>
+  	</div>
+    
+    <p id="showError">error invalid tracking number or company name</p>
+    <script>
+        function myFunction(value) {
+            var showError = document.getElementById("showError");
+            if(value){
+             showError.innerHTML = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
